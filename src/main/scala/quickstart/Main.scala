@@ -8,6 +8,7 @@ import angulate2.platformBrowser.BrowserModule
   declarations = @@[AppComponent],
   bootstrap = @@[AppComponent]
 )
+@scalajs.js.annotation.JSExport
 class AppModule {
 
 }
