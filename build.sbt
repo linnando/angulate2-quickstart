@@ -1,7 +1,7 @@
 
 lazy val commonSettings = Seq(
   organization := "de.surfice",
-  version := "0.1.0-SNAPSHOT",
+  version := "0.1.0-RC1",
   scalaVersion := "2.11.11",
   scalacOptions ++= Seq("-deprecation","-unchecked","-feature","-Xlint"),
   resolvers += Resolver.sonatypeRepo("snapshots"),
@@ -32,10 +32,6 @@ lazy val root = project.in(file(".")).
       "@angular/forms"                    -> "npm:@angular/forms/bundles/forms.umd.js",
       "@angular/upgrade"                  -> "npm:@angular/upgrade/bundles/upgrade.umd.js",
       "rxjs"                              -> "npm:rxjs"
-    ),
-    scalaJSLauncher in (Compile, fastOptJS) := {
-      Attributed.blank[VirtualJSFile](FileVirtualJSFile(sjsxFile.value))
-    }
-    //resolvers += Resolver.sonatypeRepo("releases")
+    )
   )
 
