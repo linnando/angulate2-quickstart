@@ -6,20 +6,17 @@ Quickstart template for [angulate2](https://github.com/jokade/angulate2).
 ### Prerequisites
 Node.js must be installed in addition to `sbt`.
 
-### Step 1
-Clone this repository and then run
-```shell
-$ npm install
-```
+### Create configuration files
+`sbt> fastOptJS::systemJS`
 
-### Step 2
-Start sbt and compile the Scala.js project:
-```shell
-> fastOptJS
-```
+`sbt> fastOptJS::liteServerWriteConfigFile`
 
-### Step 3
-Start the node.js `lite-server` and point your browser to `localhost:3000` (if not loaded automatically):
-```shell
-$ npm start
-```
+### Compile project
+`sbt> fastOptJS`
+
+### Run application
+Start the lite-server in the project root directory:
+`$ node_modules/lite-server/bin/lite-server --config=target/scala-2.11/bs-config-fastopt.json`
+
+then point your browser to
+`http://localhost:3000/index-fastopt.html`
