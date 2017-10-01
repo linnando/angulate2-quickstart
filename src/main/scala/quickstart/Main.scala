@@ -5,10 +5,10 @@ import angulate2.platformBrowser.BrowserModule
 
 @NgModule(
   imports = @@[BrowserModule],
-  declarations = @@[AppComponent],
+  declarations = @@[AppComponent, TestComponent, TestWithConstructorComponent],
   bootstrap = @@[AppComponent]
 )
-@scalajs.js.annotation.JSExport
+@scalajs.js.annotation.JSExportTopLevel("AppModule")
 class AppModule {
 
 }

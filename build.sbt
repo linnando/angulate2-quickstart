@@ -11,8 +11,6 @@ lazy val commonSettings = Seq(
   publishLocal := {}
 )
 
-import org.scalajs.core.tools.io.{VirtualJSFile, FileVirtualJSFile}
-
 lazy val root = project.in(file(".")).
   enablePlugins(Angulate2Plugin,LiteServerPlugin).
   settings(commonSettings: _*).
@@ -34,4 +32,3 @@ lazy val root = project.in(file(".")).
       "rxjs"                              -> "npm:rxjs"
     )
   )
-
